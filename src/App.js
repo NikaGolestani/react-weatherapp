@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+//import axios from "axios";
 import "./App.css";
 import Weekdays from "./Weekdays";
 import Today from "./Today";
