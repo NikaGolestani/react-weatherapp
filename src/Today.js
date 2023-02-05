@@ -1,11 +1,12 @@
 import React from "react";
-import Emoji from "./Emoji";
 
 export default function Weekdays() {
   return (
     <div className="todaydiv">
       <div className="today">
-        <h1 className="p-0 m-0" id="city"></h1>
+        <h1 className="p-0 m-0" id="city">
+          "Istanbul"
+        </h1>
         <h4 className="p-0 m-0 text-secondary " id="date">
           Tuesday 05:55
         </h4>
@@ -18,9 +19,7 @@ export default function Weekdays() {
             5°/55°
           </span>
         </div>
-        <span id="emoji">
-          <Emoji />
-        </span>
+        <span id="emoji"></span>
         <span className=" d-block text-secondary text-center self-align-end p-2"></span>
       </div>
       <br />
