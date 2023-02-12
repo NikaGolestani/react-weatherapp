@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div className="row">
-      <span className="text-secondary">
+      <span id="cb">
         <a href="https://github.com/NikaGolestani/react-weatherapp">
           open-sourced
         </a>{" "}
