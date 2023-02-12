@@ -11,7 +11,6 @@ export default function Today(props) {
     axios.get(apiUrl).then(handleResponse);
   }
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
