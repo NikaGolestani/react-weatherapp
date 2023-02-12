@@ -2,7 +2,9 @@
   --light-second: #9df2ff;
   --dark-prime: #0f044c;
 }
-
+body {
+  background-image: linear-gradient(to right, #000 25%, var(--dark-prime) 75%);
+}
 .App {
   font-family: cursive;
   text-align: center;
@@ -12,6 +14,7 @@
   max-width: 1000px;
   margin: 0 auto;
   border-radius: 5px;
+  border: #9df2ff solid 1px;
 }
 input {
   border-color: var(--light-second);
