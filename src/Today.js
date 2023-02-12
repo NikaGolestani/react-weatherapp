@@ -4,9 +4,11 @@ import Emoji from "./Emoji";
 import DateElement from "./DateElement";
 export default function Today(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  search();
+  if (props.city !== weatherData.oldProps) {
+    search();
+  }
   function search() {
-    const apiKey = "9f954b7b90bdofbd5c253fa40ba4tc1f";
+    const apiKey = "fb1a5abb4bafod018947tcd1dd70f5c3";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -21,6 +23,7 @@ export default function Today(props) {
       icon: response.data.condition.icon,
       wind: response.data.wind.speed,
       city: response.data.city,
+      oldProps: props.city,
     });
   }
   if (weatherData.ready) {

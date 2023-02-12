@@ -6,15 +6,15 @@ import Today from "./Today";
 import Footer from "./Footer";
 
 export default function App() {
-  const [today, setToday] = useState(<Today city="Istanbul" />);
-  const [city, setCity] = useState();
+  const [city, setCity] = useState("Istanbul");
+  const [cityT, setCityT] = useState();
   function handleSubmit(event) {
     event.preventDefault();
-    setToday(<Today city={city} />);
+    setCity(cityT);
   }
 
   function handleCityChange(event) {
-    setCity(event.target.value);
+    setCityT(event.target.value);
   }
   return (
     <div className="main">
@@ -22,13 +22,13 @@ export default function App() {
       <form className="d-flex m-2" id="search-form" onSubmit={handleSubmit}>
         <div className=" d-flex flex-no-wrap col-9 mr-5">
           <input
+            onChange={handleCityChange}
             type="search"
             className="searchbar "
             placeholder="Enter a city"
           />
 
           <input
-            onChange={handleCityChange}
             type="submit"
             value="Search"
             className="searchbutton rounded-pill"
@@ -42,7 +42,9 @@ export default function App() {
       </form>
       <div>
         <div className="row ms-1 p-0 ">
-          <div className="col-sm-3 p-1 m-1 ">{today}</div>
+          <div className="col-sm-3 p-1 m-1 ">
+            <Today city={city} />
+          </div>
           <Weekdays city="istanbul" />
           <Footer />
         </div>
