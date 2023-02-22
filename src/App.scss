@@ -1,0 +1,218 @@
+$light-second: #9df2ff;
+$dark-prime: #0f044c;
+.clear-sky-night {
+  .main {
+    background-image: url("nl.webp");
+    border: #9df2ff solid 1px;
+  }
+  input {
+    border-color: $light-second;
+    color: $light-second;
+  }
+  span {
+    text-align: center;
+    color: $light-second;
+  }
+
+  .searchbar {
+    background-color: $dark-prime;
+  }
+
+  .searchbutton {
+    background-color: $light-second;
+    color: $dark-prime;
+    border-color: $dark-prime;
+  }
+  .currentbutton {
+    background-color: $dark-prime;
+  }
+  .navbar {
+    background-color: $dark-prime;
+    color: $light-second;
+    justify-content: center;
+  }
+
+  .num {
+    color: $light-second;
+  }
+
+  .day {
+    color: $light-second;
+  }
+  .today {
+    background-color: $dark-prime;
+    border: 2px solid $light-second;
+  }
+
+  .weekdiv {
+    background-color: $dark-prime;
+    border: 2px solid $light-second;
+  }
+  .littletext {
+    color: $light-second;
+  }
+  #city {
+    color: $light-second;
+  }
+  a {
+    color: $light-second;
+  }
+  #cb {
+    color: #fff;
+  }
+  a:hover {
+    color: $light-second;
+  }
+  #changemod {
+    background-color: $dark-prime;
+    border: $light-second 1px solid;
+    border-radius: 50%;
+    margin-left: 5px;
+    box-shadow: $light-second 0px 0px 10px;
+  }
+}
+
+.clear-sky-day {
+  input {
+    border-color: cornsilk;
+    color: cornsilk;
+  }
+  .main {
+    background-image: url("clouds.avif");
+  }
+  .searchbar {
+    color: #ffd24c;
+    background-color: #92b4ec;
+  }
+
+  .searchbutton {
+    background-color: #ffd24c;
+  }
+  .currentbutton {
+    background-color: #92b4ec;
+  }
+  .navbar {
+    background-color: #92b4ec;
+    color: #ffd24c;
+  }
+  .num {
+    color: #4d87e2;
+  }
+
+  .day {
+    color: #ffd24c;
+  }
+
+  .today {
+    background-color: #fde9ac;
+    border: 2px solid #ffd24c;
+  }
+  .weekdiv {
+    background-color: #92b4ec;
+    justify-content: center;
+    border: 2px solid #c9d8ee;
+  }
+  #city {
+    color: #4d87e2;
+  }
+  a {
+    color: #fcc92e;
+  }
+  #cb {
+    color: #92b4ec;
+  }
+  a:hover {
+    color: #fdbe00;
+  }
+  #changemod {
+    background-color: #92b4ec;
+    border: #fdbe00 1px solid;
+    border-radius: 50%;
+    margin-left: 5px;
+    box-shadow: #ffd24c 0px 0px 10px;
+  }
+}
+.App {
+  font-family: cursive;
+  text-align: center;
+}
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-size: cover;
+}
+span {
+  text-align: center;
+}
+
+.searchbar {
+  width: 100%;
+  padding-left: 20px;
+  border: none;
+  right: 40px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.searchbutton {
+  position: relative;
+  right: 50px;
+  top: -1px;
+  width: 115px;
+  height: 105%;
+}
+.navbar {
+  font-weight: 1000;
+  justify-content: center;
+}
+.num {
+  font-size: 60px;
+  display: block;
+}
+#emoji {
+  display: block;
+}
+
+.bottomdiv {
+  position: relative;
+  right: 3px;
+}
+
+.day {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  font-weight: 500;
+}
+.today {
+  border-radius: 5px;
+  margin: 0px auto;
+  padding: 15px;
+}
+.todaydiv {
+  max-width: 250px;
+  margin: 30px auto;
+}
+
+.weekdiv {
+  justify-content: left;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.littletext {
+  margin-top: 20px;
+  display: block;
+}
+#changemod {
+  padding: 8px 5px 2px 5px;
+}
+.emoji {
+  display: block;
+  margin: 0 auto;
+}
+body {
+  background-image: linear-gradient(to right, #000 25%, $dark-prime 75%);
+}

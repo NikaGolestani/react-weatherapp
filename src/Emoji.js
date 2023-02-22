@@ -21,12 +21,34 @@ export default function Emoji(props) {
     "mist-day": "FOG",
     "mist-night": "FOG",
   };
-  return (
-    <ReactAnimatedWeather
-      icon={codeMapping[props.code]}
-      color="#78edff"
-      size={props.size}
-      animate={true}
-    />
-  );
+  if ((props.night === "clear-sky-night") & (props.code !== "clear-sky-day")) {
+    return (
+      <ReactAnimatedWeather
+        color="#9df2ff"
+        icon={codeMapping[props.code]}
+        size={props.size}
+        animate={true}
+      />
+    );
+  } else {
+    if (props.code !== "clear-sky-day") {
+      return (
+        <ReactAnimatedWeather
+          color="#4d87e2"
+          icon={codeMapping[props.code]}
+          size={props.size}
+          animate={true}
+        />
+      );
+    } else {
+      return (
+        <ReactAnimatedWeather
+          color="#ffd24c"
+          icon={codeMapping[props.code]}
+          size={props.size}
+          animate={true}
+        />
+      );
+    }
+  }
 }

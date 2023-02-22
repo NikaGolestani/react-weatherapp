@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import Emoji from "./Emoji";
 import DateElement from "./DateElement";
+import ReactLoading from "react-loading";
 export default function Today(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+
   if (props.city !== weatherData.oldProps) {
     search();
   }
@@ -26,6 +28,7 @@ export default function Today(props) {
         wind: response.data.wind.speed,
         city: response.data.city,
         oldProps: props.city,
+        oldLat: props.lat,
       });
     } else {
       setWeatherData({
@@ -60,14 +63,14 @@ export default function Today(props) {
               <span className=" d-block text-secondary text-center self-align-end p-2"></span>
             </div>
             <span id="emoji">
-              <Emoji code={weatherData.icon} />
+              <Emoji code={weatherData.icon} night={props.night} />
             </span>
             <span className=" d-block text-secondary text-center self-align-end p-2"></span>
           </div>
           <br />
           <div className="text-secondary today details">
             Wind: {weatherData.wind} km/h
-            <Emoji code="wind-day" size={20} />
+            <Emoji code="wind-day" size={20} night={props.night} />
             <br />
             Humidity: {weatherData.humidity}%
           </div>
@@ -76,7 +79,7 @@ export default function Today(props) {
     } else {
       return (
         <div className="todaydiv">
-          <div className="today">{weatherData.msg}</div>
+          <div className="text-secondary today details">{weatherData.msg}</div>
           <br />
           <div className="text-secondary today details">
             <p>{weatherData.msg}</p>
@@ -87,10 +90,22 @@ export default function Today(props) {
   } else {
     return (
       <div className="todaydiv">
-        <div className="today">Loading...</div>
+        <div className="today">
+          <ReactLoading
+            type={"bars"}
+            color={"#aaa"}
+            height={"20%"}
+            width={"20%"}
+          />
+        </div>
         <br />
         <div className="text-secondary today details">
-          <p>Loading...</p>
+          <ReactLoading
+            type={"bars"}
+            color={"#aaa"}
+            height={"20%"}
+            width={"20%"}
+          />
         </div>
       </div>
     );
